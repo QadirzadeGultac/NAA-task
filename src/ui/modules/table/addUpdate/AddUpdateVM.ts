@@ -36,7 +36,7 @@ const [lang, setLang] = useState('az');
   const { mutate: create } = useCreateNews();
   const {mutate: update} = useUpdateNews()
   const {data: news} = useGetNews();
-  const idNews = news?.find((item) => item?.id === id)
+  const idNews = news?.find((item: any) => item?.id === id)
   const watchedTitle = form.watch("title");
   useEffect(() => {
   if (id && idNews) {
@@ -105,7 +105,6 @@ const onSubmit = (data: NewsItemDTO) => {
   
 };
 const category = form.watch("category");
-console.log(idNews)
   return {
     isAddModalOpen,
     setIsAddModalOpen,

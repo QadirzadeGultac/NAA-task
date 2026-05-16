@@ -21,7 +21,6 @@ export const AddUpdate = () => {
     setStep,
     form,
     onSubmit,
-    setIsSuccessModalOpen,
     images,
     id,
     idNews,
@@ -104,7 +103,7 @@ export const AddUpdate = () => {
           <InputLabel className='text-gray-700! font-medium!'>Cover Image</InputLabel>
           <Paper shadow='xs' className='flex! py-3! items-center! justify-center! gap-3!'>
             {id ? (
-              <div className='w-full px-3'>{idNews?.img?.map((item, index)=>(
+              <div className='w-full px-3'>{idNews?.img?.map((item: any, index:number)=>(
                 <div key={index}>
                 <Image className='w-30! rounded-[10px]!' src={item.url}/>
                 <Badge>{item?.url?.slice(27)}</Badge>

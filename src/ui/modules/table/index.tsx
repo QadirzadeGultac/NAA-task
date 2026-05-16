@@ -38,13 +38,13 @@ export const NewsTable = () => {
       <Table>
         <Table.Thead>
           <Table.Tr>
-            {columns?.map((item) => (
+            {columns?.map((item: any) => (
               <Table.Th className="text-blue-900! font-semibold! text-base!" key={item.field}>{item.label}</Table.Th>
             ))}
           </Table.Tr>
         </Table.Thead>
         <Table.Tbody>
-          {paginatedData?.map((row) => (
+          {paginatedData?.map((row: any) => (
             <Table.Tr key={row.id}>
               {columns?.map((col) => (
                 <Table.Td className="" key={col.field}>
