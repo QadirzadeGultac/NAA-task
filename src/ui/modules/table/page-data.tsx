@@ -44,7 +44,8 @@ const useNewsColumn = () => {
       render: (rowData) => {if (!rowData.sharingTime) return <div>-</div>;
     const onlyDate = rowData.sharingTime.split('T')[0]; 
     const [year, month, day] = onlyDate.split('-');
-    return <div className="flex flex-col"><span className="text-[16px] font-medium text-neutral-800">{`${day}/${month}/${year}`}</span> <span className="ml-5 text-[12px] font-normal text-neutral-400">{rowData.sharingTime?.split('T')[1].slice(0,5)}</span></div>}
+    const time = rowData.sharingTime?.split('T')?.[1]?.slice(0,5);
+    return <div className="flex flex-col"><span className="text-[16px] font-medium text-neutral-800">{`${day}/${month}/${year}`}</span> <span className="ml-5 text-[12px] font-normal text-neutral-400">{time}</span></div>}
     },
     {
       label: "Status",
