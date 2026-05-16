@@ -1,4 +1,4 @@
-import { Box, Button, Divider, Drawer, Image, NavLink, Paper, Stack } from '@mantine/core';
+import { Box, Divider, Image, NavLink, Paper, Stack } from '@mantine/core';
 import { Link, useLocation } from 'react-router-dom';
 import { sidebarData } from './page-data';
 import '@mantine/core/styles.css';

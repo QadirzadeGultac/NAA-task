@@ -39,7 +39,7 @@ export const TextEditor = ({ value, onChange }: Props) => {
     const isSame = editor.getHTML() === value;
     
     if (!isSame && value !== undefined) {
-      editor.commands.setContent(value || "", false, { preserveSelection: true });
+      editor.commands.setContent(value || "");
     }
   }, [value, editor]);
 

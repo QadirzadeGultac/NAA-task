@@ -3,10 +3,9 @@ import type { NewsItemDTO, TColumn } from "./TAddUpdate";
 import { useNewsStore } from "./NewsStore";
 import trash from "../../../assets/trash.svg";
 import edit from "../../../assets/edit.svg"
-import { useState } from "react";
 
 const useNewsColumn = () => {
-  const { setIsDeleteModalOpen, setTitle, setIsSuccessModalOpen,setIsAddModalOpen, setId } =
+  const { setIsDeleteModalOpen, setTitle,setIsAddModalOpen, setId } =
     useNewsStore();
   const columns: TColumn<NewsItemDTO>[] = [
     {

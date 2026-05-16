@@ -48,7 +48,7 @@ export const NewsTable = () => {
             <Table.Tr key={row.id}>
               {columns?.map((col) => (
                 <Table.Td className="" key={col.field}>
-                  {col?.render(row)}
+                  {col?.render?.(row)}
                 </Table.Td>
               ))}
             </Table.Tr>
