@@ -97,6 +97,7 @@ const onSubmit = (data: NewsItemDTO) => {
     create({...data, sharingTime: new Date().toISOString(), author: "Admin"},{
     onSuccess: () => {
       setIsAddModalOpen(false);
+      setIsSuccessModalOpen(true);
       setStep(1);
       form.reset();
     }
